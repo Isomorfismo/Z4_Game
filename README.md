@@ -48,3 +48,6 @@ Pressing a cell adds +1 mod 4 to all cells in its 3×3 neighborhood.
 The solver builds and inverts a mod 4 matrix system to find an optimal solution.
 
 Customization mode is useful for testing puzzles and creating your own challenges.
+
+
+### INSPIRED ON THE [EXPONENTIAL IDLE](https://conicgames.github.io/exponentialidle/) GAME.
