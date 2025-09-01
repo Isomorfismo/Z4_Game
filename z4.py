@@ -1,5 +1,3 @@
-# https://github.com/Isomorfismo/Z4_Game
-
 import pygame
 import random
 from itertools import product
@@ -202,6 +200,8 @@ def main():
     font = pygame.font.SysFont(None, 28)
     big = pygame.font.SysFont(None, 32)
     tiny = pygame.font.SysFont(None, 22)
+    
+    num_font = pygame.font.SysFont(None, 100, bold=True)
 
     board = new_random_board()
     moves = 0
@@ -213,9 +213,16 @@ def main():
     next_step_time = 0
     customizing = False
 
+    arrow_mode = True
+
     btn_w, btn_h, gap = 145, 44, 9
     base_y = GRID_MARGIN*2 + GRID_SIZE*TILE + 18
     buttons = []
+
+    def on_simbol():
+        nonlocal arrow_mode
+        arrow_mode = not arrow_mode
+        simbol_btn.text = "Flechas" if arrow_mode else "Numeros"
 
     def on_hint():
         nonlocal hint_cell
@@ -249,9 +256,14 @@ def main():
         for b in buttons[1:]:
             b.enabled = not customizing
 
+    simbol_btn = Button(
+        (GRID_MARGIN + 2*(btn_w + gap), base_y, btn_w, btn_h),
+        "Flechas", big, on_simbol
+    )
     buttons.append(Button((GRID_MARGIN, base_y, btn_w, btn_h), "Personalizar", big, on_customize))
     buttons.append(Button((GRID_MARGIN, base_y + 50, btn_w, btn_h), "Pista", big, on_hint))
     buttons.append(Button((GRID_MARGIN + btn_w + gap, base_y + 50, btn_w, btn_h), "Resolver", big, on_solve))
+    buttons.append(simbol_btn)
     buttons.append(Button((GRID_MARGIN + 2*(btn_w + gap), base_y + 50, btn_w, btn_h), "Nuevo", big, on_new))
 
     running = True
@@ -297,7 +309,12 @@ def main():
                 x, y = GRID_MARGIN + c*TILE, GRID_MARGIN + r*TILE
                 rect = (x, y, TILE, TILE)
                 pygame.draw.rect(screen, (30, 30, 40), rect, border_radius=6)
-                draw_arrow(screen, rect, board[r][c])
+                if arrow_mode:
+                    draw_arrow(screen, rect, board[r][c])
+                else:
+                    num = str(board[r][c] % 4)
+                    num_label = num_font.render(num, True, COLORS[board[r][c] % 4])
+                    screen.blit(num_label, num_label.get_rect(center=(x + TILE//2, y + TILE//2)))
                 pygame.draw.rect(screen, LINE, rect, width=2, border_radius=6)
 
         if hint_cell is not None:
@@ -326,6 +343,7 @@ def main():
         clock.tick(60)
 
     pygame.quit()
+
 
 if __name__ == "__main__":
     main()
