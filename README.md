@@ -16,6 +16,7 @@ The goal is to make all arrows point up (state 0).
 - Hint system: shows a recommended next move.
 - Auto-solver: demonstrates the minimum sequence of moves step by step.
 - Customization mode: toggleable mode that lets you rotate individual cells (without affecting neighbors) to design your own puzzles.
+- Change visualization: choose between arrows and numbers to represent the current state of the board.
 
 🎮 Controls
 
@@ -26,6 +27,7 @@ Buttons:
 - Hint: show an optimal next move.
 - Solve: watch the puzzle auto-solve.
 - New: generate a random board.
+- Arrows/Numbers: select the representation you prefer.
 
 📦 Installation
 
