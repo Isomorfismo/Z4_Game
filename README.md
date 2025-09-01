@@ -37,8 +37,10 @@ Install dependencies:
 
 🖼️ Screenshot
 
-<img width="615" height="877" alt="image" src="https://github.com/user-attachments/assets/b65dd8cd-3d22-4f54-b92c-f83a4fd3aac9" />
-<img width="615" height="877" alt="image" src="https://github.com/user-attachments/assets/94aa9a46-95a0-4d5e-9241-3863a4bd467e" />
+<img width="465" height="727" alt="image" src="https://github.com/user-attachments/assets/cc13589a-47ba-4e6f-97b7-593c8c54c14a" />
+<img width="465" height="727" alt="image" src="https://github.com/user-attachments/assets/41050159-c95b-48c6-9a97-d45024fc4768" />
+<img width="465" height="727" alt="image" src="https://github.com/user-attachments/assets/c74d822a-a5aa-43eb-8c3c-9ada19273d9c" />
+<img width="465" height="727" alt="image" src="https://github.com/user-attachments/assets/4594f48e-9431-46b4-90a1-373910708eb1" />
 
 
 🧮 How It Works
