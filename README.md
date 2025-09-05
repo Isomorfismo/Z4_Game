@@ -1,11 +1,11 @@
 # The ℤ₄ Game
 
-Lights Out ℤ₄ with Chebyshev Neighborhood
+Lights Out ℤ₄ with Chebyshev/Moore Neighborhood
 
 This is a variant of the classic Lights Out puzzle, implemented in Python with Pygame.
 Instead of binary lights, the game uses arrows with 4 possible states (mod 4 arithmetic).
 
-Clicking a cell rotates all arrows in its 3×3 Chebyshev neighborhood (the cell and its 8 neighbors) by +1 mod 4.
+Clicking a cell rotates all arrows in its 3×3 Chebyshev neighborhood (Moore neighborhood when $r=1$) by +1 mod 4.
 The goal is to make all arrows point up (state 0).
 
 ✨ Features
