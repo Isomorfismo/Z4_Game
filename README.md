@@ -1,5 +1,7 @@
 # The ℤ₄ Game
 
+# Play the game: https://isomorfismo.itch.io/z4
+
 Lights Out ℤ₄ with Chebyshev/Moore Neighborhood
 
 This is a variant of the classic Lights Out puzzle, implemented in Python with Pygame.
